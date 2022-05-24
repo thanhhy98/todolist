@@ -1,3 +1,4 @@
+Please add .env file in back-end folder
 # Test Nelisoftwares
 
 Hello, thank you for applying to Nelisoftwares software engineer position. This quick test will check your knowledge in both front-end (ReactJS) and back-end (ExpressJS/ApolloServer/SQL). We will make a todos app to create, edit, delete and list todos in our React app with Apollo GraphQL + MySQL as back-end. Please read this entire README.md and let us know if you have any question.
