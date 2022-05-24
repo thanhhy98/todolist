@@ -16,6 +16,10 @@ const InputForm = ({ editID }) => {
     const handleSubmit = e => {
             e.preventDefault()
             if(editID) return
+            if(!createValue) {
+              notiAction('DANGER', 'Blank todo is not allowed!')
+              return 
+            }
             createTodo({ variables: { description: createValue, isFinished: false } })
             notiAction('SAFE', `'${createValue}' todo is created successfully!`)
             setCreateValue('')

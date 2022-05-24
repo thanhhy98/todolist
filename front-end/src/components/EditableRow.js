@@ -19,7 +19,10 @@ const EditableRow = ({
       }, [])
     
     const handleSave = async () => {
-        if(!editValue) return
+        if(!editValue) {
+          notiAction('DANGER', 'Blank todo is not allowed!')
+          return
+        }
         await updateTodo({ variables: { id : parseInt(id), description: editValue } })
         setEditID(null)
         notiAction('SAFE', `The todo is saved as '${editValue}'`)

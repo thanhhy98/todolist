@@ -23,7 +23,7 @@ const PopUp = ({
                     <p>Click the todo title in the list to edit finish state</p>
                     <div className='check-box'>
                         <input type="checkbox" checked={isChecked} name='check' onChange={checkHandle} size='large'/>
-                        Click to dismiss the tip for next visits
+                        Click the checkbox to dismiss the tip for next visits
                     </div>
                     <button onClick={handleSubmit}>OK</button>
                 </form>
