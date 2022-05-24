@@ -1,0 +1,258 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  min-height: 100vh;
+  /* background:#ffeded; */
+  background-image: linear-gradient(to right, rgb(254, 243, 210) , #ffe2e2);
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  width: 500px;
+}
+
+input {
+  padding: 1rem 2rem;
+  display: block;
+  width: 100%;
+}
+header, form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+header {
+  font-size: 6rem;
+  color:rgb(73, 134, 204)
+}
+form input, form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: white;
+}
+
+form input:focus {
+  outline: none;
+}
+form button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button i {
+  font-size: small;
+
+}
+form button:hover {
+  background: rgba(21, 20, 20, 0.81);
+  color: white
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.todo li {
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.todo input {
+  flex: 1;
+  font-size: 1.5rem;
+  padding: 0.6rem;
+}
+
+.trash-btn,
+.update-btn,
+.save-btn {
+  background : #ff6f47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.trash-btn:hover {
+  background : #ce2d00;
+
+}
+.update-btn {
+  background: rgb(73, 204, 73);
+
+}
+.update-btn:hover {
+  background: rgb(0, 168, 0)
+
+}
+.save-btn {
+  background: rgb(0, 132, 255);
+}
+.save-btn:hover{
+  background: rgb(0, 95, 185)
+
+}
+.todo li {
+  padding : 0rem 0.5rem;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border:none;
+  width: 16rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  color: rgb(250, 255, 217)
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.popup {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  top:0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.popup .tip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  height: auto;
+  width: auto;
+  padding: 2rem;
+  background-color: white;
+}
+
+.popup p {
+  margin-top: 1rem;
+
+  display: flex
+}
+.popup .check-box {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  display: flex
+}
+.popup .check-box input {
+  width: auto;
+  margin-right: 0.5rem;
+
+}
+
+.popup button  {
+  background-color: #c70000;
+  width: 4rem;
+  align-self: center;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color:rgba(250, 250, 250, 0.947);
+  cursor: pointer;
+}
+
+
+.noti {
+  position: fixed;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, 0);
+  justify-content: center;
+  align-items: center;
+  top:0;
+  z-index: 10;
+}
+
+.noti .danger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  background-color: rgba(188, 0, 0, 0.90);
+  color:rgb(250, 255, 217);
+}
+
+.noti .safe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  background-color: rgba(88, 220, 0, 0.9);
+  color:rgb(250, 255, 217);
+}
+
+.exception {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
